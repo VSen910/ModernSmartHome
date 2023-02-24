@@ -24,42 +24,40 @@ class _SmartCardState extends State<SmartCard> {
       child: Container(
         height: 200,
         width: 150,
-        child: Expanded(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                'assets/light-bulb.png',
-                height: 80,
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Smart\nLight',
-                      style: TextStyle(fontSize: 16),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/light-bulb.png',
+              height: 80,
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Smart\nLight',
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  Transform.rotate(
+                    angle: pi/2,
+                    child: CupertinoSwitch(
+                      value: isToggledOn,
+                      onChanged: (value) {
+                        setState(() {
+                          isToggledOn = !isToggledOn;
+                        });
+                      },
                     ),
-                    Transform.rotate(
-                      angle: pi/2,
-                      child: CupertinoSwitch(
-                        value: isToggledOn,
-                        onChanged: (value) {
-                          setState(() {
-                            isToggledOn = !isToggledOn;
-                          });
-                        },
-                      ),
-                    ),
-                  ],
-                ),
-              )
-            ],
-          ),
+                  ),
+                ],
+              ),
+            )
+          ],
         ),
       ),
     );
