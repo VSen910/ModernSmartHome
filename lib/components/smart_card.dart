@@ -19,7 +19,8 @@ class _SmartCardState extends State<SmartCard> {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
       ),
-      color: Colors.grey.shade400,
+      elevation: 0,
+      color: Color.fromARGB(44, 164, 167, 189),
       child: Container(
         height: 200,
         width: 150,
