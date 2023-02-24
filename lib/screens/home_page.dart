@@ -18,12 +18,12 @@ class HomePage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Image.asset(
-                    'assets/menu.png',
-                    height: 45,
-                  ),
                   Icon(
                     Icons.person,
+                    size: 45,
+                  ),
+                  Icon(
+                    Icons.logout,
                     size: 45,
                   ),
                 ],
